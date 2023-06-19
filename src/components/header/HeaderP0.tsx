@@ -87,7 +87,7 @@ export function HeaderP0(props: Props) {
               </>
 
             }
-            <Link href="#" className="rounded-md bg-cris-accent px-3.5 py-2.5 text-sm font-semibold text-cris-inverted shadow-sm hover:bg-cris-accent/95 ">
+            <Link href="#" className="rounded-md bg-cris-accent px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-cris-accent/95 ">
               Login
             </Link>
           </div>

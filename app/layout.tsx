@@ -8,7 +8,7 @@ import { getPagesByParentId, getPagesNavigation } from '@/src/lib/pages'
 import { HeaderP0 } from '@/src/components/header/HeaderP0'
 
 export const metadata = {
-  title: 'Stores',
+  title: 'Portfolio',
   description: '',
 }
 

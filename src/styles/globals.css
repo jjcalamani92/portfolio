@@ -23,8 +23,34 @@
     --accent-color: 239, 68, 68;
     --primary-text: 234, 237, 243;
     --secondary-text: 245, 248, 255;
+    --card-color: 230, 230, 230;
+    --card-muted-color: 205, 205, 205;
     --divider-color: 189, 189, 189;
   }
+  /* html[class="red"] {
+    --dark-primary-color: rgb(185, 28, 28);
+    --light-primary-color: rgb(254, 226, 226);
+    --primary-color: rgb(220, 38, 38);
+    --fill-color: rgb(255, 255, 255);
+    --accent-color: rgb(239, 68, 68);
+    --primary-text: rgb(33, 33, 33);
+    --secondary-text: rgb(117, 117, 117);
+    --card-color: rgb(230, 230, 230);
+    --card-muted-color: rgb(205, 205, 205);
+    --divider-color: rgb(189, 189, 189);
+  }
+  html[class="darkRed"] {
+    --dark-primary-color: rgb(185, 28, 28);
+    --light-primary-color: rgb(153, 27, 27);
+    --primary-color: rgb(220, 38, 38);
+    --fill-color: rgb(33, 39, 55);
+    --accent-color: rgb(239, 68, 68);
+    --primary-text: rgb(234, 237, 243);
+    --secondary-text: rgb(245, 248, 255);
+    --card-color: rgb(230, 230, 230);
+    --card-muted-color: rgb(205, 205, 205);
+    --divider-color: rgb(189, 189, 189);
+  } */
   html[class="orange"] {
     --dark-primary-color: 194, 65, 12;
     --light-primary-color: 255, 237, 213;

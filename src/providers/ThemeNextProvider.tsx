@@ -13,6 +13,6 @@ export default function ThemeNextProvider({ children, site }: Props) {
   const { data } = useQuery({ queryKey: ["site"] , queryFn: () => getSiteById(), initialData: site})
   
   return (
-    <ThemeProvider attribute="class" defaultTheme={data.data.theme.light}>{children}</ThemeProvider>
+    <ThemeProvider attribute="class" defaultTheme={data.data.theme.light} themes={data.data.theme.themes}>{children}</ThemeProvider>
   )
 }

@@ -13,7 +13,6 @@ const i = '0'
 
 export default async function Index(props: Props) {
   const category = await getCategoryByPaths(i, props.params)
-
   const articles = await getArticlesByParentId(category._id)
   
   const categories = await getCategoriesByParentId( `${+i+1}`, category._id)
