@@ -54,7 +54,7 @@ export function HeaderP0(props: Props) {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {props.pages.map((item, i) => (
-              <Link key={i} href={item.slug} className="text-sm font-semibold leading-6 ">
+              <Link key={i} href={`/${item.slug}`} className="text-sm font-semibold leading-6 ">
                 {item.data.name}
               </Link>
             ))}
