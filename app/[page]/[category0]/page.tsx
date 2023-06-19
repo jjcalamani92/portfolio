@@ -2,7 +2,6 @@ import ListArticles1 from '@/src/components/ListArticles1'
 import ListCategories from '@/src/components/ListCategories'
 import { getArticlesByParentId } from '@/src/lib/articles'
 import { getCategoriesByParentId, getCategoryByPaths } from '@/src/lib/categories'
-import { getPageBySlug } from '@/src/lib/pages'
 import React from 'react'
 interface Props {
   params: {

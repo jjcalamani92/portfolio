@@ -8,7 +8,7 @@ export const getArticleById = async (id: string):Promise<Article> => {
   return res.json();
 };
 export const getArticlesByParentId = async (id: string):Promise<Article []> => {
-  const res = await fetch(`${url}/api/${v}/${type}/query/articles/article/parentId?id=${id}`);
+  const res = await fetch(`${url}/api/${v}/${type}/query/articles/article/parentId?id=${id}`, {cache: 'no-store'});
 
   return res.json();
 };
