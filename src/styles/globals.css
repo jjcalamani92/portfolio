@@ -1,0 +1,353 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root,
+  html[class="red"] {
+    --dark-primary-color: 185, 28, 28;
+    --light-primary-color: 254, 226, 226;
+    --primary-color: 220, 38, 38;
+    --fill-color: 255, 255, 255;
+    --accent-color: 239, 68, 68;
+    --primary-text: 33, 33, 33;
+    --secondary-text: 117, 117, 117;
+    --card-color: 230, 230, 230;
+    --card-muted-color: 205, 205, 205;
+    --divider-color: 189, 189, 189;
+  }
+  html[class="darkRed"] {
+    --dark-primary-color: 185, 28, 28;
+    --light-primary-color: 153, 27, 27;
+    --primary-color: 220, 38, 38;
+    --fill-color: 33, 39, 55;
+    --accent-color: 239, 68, 68;
+    --primary-text: 234, 237, 243;
+    --secondary-text: 245, 248, 255;
+    --divider-color: 189, 189, 189;
+  }
+  html[class="orange"] {
+    --dark-primary-color: 194, 65, 12;
+    --light-primary-color: 255, 237, 213;
+    --primary-color: 234, 88, 12;
+    --fill-color: 255, 255, 255;
+    --accent-color: 249, 115, 22;
+    --primary-text: 33, 33, 33;
+    --secondary-text: 117, 117, 117;
+    --card-color: 230, 230, 230;
+    --card-muted-color: 205, 205, 205;
+    --divider-color: 189, 189, 189;
+  }
+  html[class="darkOrange"] {
+    --dark-primary-color: 255, 237, 213;
+    --light-primary-color: 194, 65, 12;
+    --primary-color: 234, 88, 12;
+    --fill-color: 33, 39, 55;
+    --accent-color: 249, 115, 22;
+    --primary-text: 234, 237, 243;
+    --secondary-text: 199, 197, 211;
+    --card-color: 52, 63, 96;
+    --card-muted-color: 138, 51, 2;
+    --divider-color: 189, 189, 189;
+  }
+  html[class="pink"] {
+    --dark-primary-color: 190, 24, 93;
+    --light-primary-color: 252, 231, 243;
+    --primary-color: 219, 39, 119;
+    --fill-color: 255, 255, 255;
+    --accent-color: 236, 72, 153;
+    --primary-text: 33, 33, 33;
+    --secondary-text: 117, 117, 117;
+    --card-color: 230, 230, 230;
+    --card-muted-color: 205, 205, 205;
+    --divider-color: 189, 189, 189;
+  }
+  html[class="darkPink"] {
+    --dark-primary-color: 252, 231, 243;
+    --light-primary-color: 190, 24, 93;
+    --primary-color: 219, 39, 119;
+    --fill-color: 33, 39, 55;
+    --accent-color: 236, 72, 153;
+    --primary-text: 234, 237, 243;
+    --secondary-text: 199, 197, 211;
+    --card-color: 52, 63, 96;
+    --card-muted-color: 138, 51, 2;
+    --divider-color: 189, 189, 189;
+  }
+  /* html[class="pink"] {
+    --dark-primary-color: rgb(190, 24, 93);
+    --light-primary-color: rgb(252, 231, 243);
+    --primary-color: rgb(219, 39, 119);
+    --fill-color: rgb(255, 255, 255);
+    --accent-color: rgb(236, 72, 153);
+    --primary-text: rgb(33, 33, 33);
+    --secondary-text: rgb(117, 117, 117);
+    --card-color: rgb(230, 230, 230);
+    --card-muted-color: rgb(205, 205, 205);
+    --divider-color: rgb(189, 189, 189);
+  }
+  html[class="darkPink"] {
+    --dark-primary-color: rgb(252, 231, 243));
+    --light-primary-color: rgb(190, 24, 93);
+    --primary-color: rgb(219, 39, 119);
+    --fill-color: rgb(33, 39, 55);
+    --accent-color: rgb(236, 72, 153);
+    --primary-text: rgb(234, 237, 243);
+    --secondary-text: rgb(199, 197, 211);
+    --card-color: rgb(52, 63, 96);
+    --card-muted-color: rgb(138, 51, 2);
+    --divider-color: rgb(189, 189, 189);
+  }
+  html[class="orange"] {
+    --dark-primary-color: rgb(194, 65, 12);
+    --light-primary-color: rgb(255, 237, 213);
+    --primary-color: rgb(234, 88, 12);
+    --fill-color: rgb(255, 255, 255);
+    --accent-color: rgb(249, 115, 22);
+    --primary-text: rgb(33, 33, 33);
+    --secondary-text: rgb(117, 117, 117);
+    --card-color: rgb(230, 230, 230);
+    --card-muted-color: rgb(205, 205, 205);
+    --divider-color: rgb(189, 189, 189);
+  }
+  
+  html[class="darkOrange"] {
+    --dark-primary-color: rgb(255, 237, 213);
+    --light-primary-color: rgb(194, 65, 12);
+    --primary-color: rgb(234, 88, 12);
+    --fill-color: rgb(33, 39, 55);
+    --accent-color: rgb(249, 115, 22);
+    --primary-text: rgb(234, 237, 243);
+    --secondary-text: rgb(199, 197, 211);
+    --card-color: rgb(52, 63, 96);
+    --card-muted-color: rgb(138, 51, 2);
+    --divider-color: rgb(189, 189, 189);
+  } */
+
+  /* html[data-theme="pink"] {
+    --color-fill: rgb(250, 252, 252);
+    --color-text-base: rgb(34, 46, 54);
+    --color-accent: rgb(211, 0, 106);
+    --color-card: rgb(234, 206, 219);
+    --color-card-muted: rgb(241, 186, 212);
+    --color-border: rgb(227, 169, 198);
+  } */
+  /* html[data-theme="darkPink"] {
+    --color-fill: rgb(53, 54, 64);
+    --color-text-base: rgb(233, 237, 241);
+    --color-accent: rgb(255, 120, 200);
+    --color-card: rgb(75, 76, 89);
+    --color-card-muted: rgb(113, 85, 102);
+    --color-border: rgb(134, 67, 107);
+  } */
+
+  /* html[class="pink"] {
+    --dark-primary-color: rgb(185, 28, 28);
+    --light-primary-color: rgb(255, 205, 210);
+    --primary-color: rgb(220, 38, 38);
+    --fill-color: rgb(255, 255, 255);
+    --accent-color: rgb(239, 68, 68);
+    --primary-text: rgb(33, 33, 33);
+    --secondary-text: rgb(117, 117, 117);
+    --divider-color: rgb(189, 189, 189);
+  }
+  html[class="darkPink"] {
+    --dark-primary-color: rgb(185, 28, 28);
+    --light-primary-color: rgb(153, 27, 27);
+    --primary-color: rgb(220, 38, 38);
+    --fill-color: rgb(33, 39, 55);
+    --accent-color: rgb(239, 68, 68);
+    --primary-text: rgb(234, 237, 243);
+    --secondary-text: rgb(245, 248, 255);
+    --divider-color: rgb(189, 189, 189);
+  } */
+  /* html[class="red"] {
+    --dark-primary-color: rgb(185, 28, 28);
+    --light-primary-color: rgb(255, 205, 210);
+    --primary-color: rgb(220, 38, 38);
+    --fill-color: rgb(255, 255, 255);
+    --accent-color: rgb(239, 68, 68);
+    --primary-text: rgb(33, 33, 33);
+    --secondary-text: rgb(117, 117, 117);
+    --divider-color: rgb(189, 189, 189);
+  }
+  html[class="darkRed"] {
+    --dark-primary-color: rgb(185, 28, 28);
+    --light-primary-color: rgb(153, 27, 27);
+    --primary-color: rgb(220, 38, 38);
+    --fill-color: rgb(33, 39, 55);
+    --accent-color: rgb(239, 68, 68);
+    --primary-text: rgb(234, 237, 243);
+    --secondary-text: rgb(245, 248, 255);
+    --divider-color: rgb(189, 189, 189);
+  } */
+
+
+	body {
+    @apply min-h-screen bg-cris-fill text-cris-base 
+    selection:bg-cris-accent selection:bg-opacity-70 selection:text-cris-inverted;
+  }
+  .prose {
+    @apply prose-headings:!mb-3 prose-headings:!text-cris-base 
+    prose-h3:italic prose-p:!text-cris-secondary
+    prose-a:!text-cris-accent  prose-a:underline-offset-8
+    hover:prose-a:text-cris-accent prose-blockquote:!border-l-cris-accent
+    prose-blockquote:border-opacity-50 prose-blockquote:opacity-80
+    prose-figcaption:!text-cris-base prose-figcaption:opacity-70
+    prose-strong:!text-cris-base
+
+    /* prose-pre:!text-cris-secondary */
+
+    prose-code:rounded prose-code:bg-cris-card 
+    prose-code:bg-opacity-75 prose-code:p-1 
+    /* prose-code:!text-cris-base */
+    prose-code:before:!content-[''] prose-code:after:!content-['']
+    
+
+    prose-pre:!text-cris-base
+    prose-ol:!text-cris-base 
+    prose-ul:overflow-x-clip prose-ul:!text-cris-base prose-li:marker:!text-cris-accent
+    prose-table:text-cris-base prose-th:border
+    prose-th:border-cris-line prose-td:border 
+    prose-td:border-cris-line prose-img:mx-auto 
+    prose-img:!mt-2 prose-img:border-2 
+    prose-img:border-cris-line prose-hr:!border-cris-line;
+  }
+  /* .prose a {
+    @apply hover:!text-cris-accent;
+  } */
+  .prose thead th:first-child,
+  tbody td:first-child,
+  tfoot td:first-child {
+    padding-left: 0.5714286em;
+    
+  }
+  .prose h2#table-of-contents {
+    @apply mb-2;
+  }
+  .prose details {
+    @apply inline-block cursor-pointer select-none text-cris-base;
+  }
+  .prose summary {
+    @apply focus-outline;
+  }
+  .prose h2#table-of-contents + p {
+    @apply hidden;
+  }
+  
+  
+  .prose #table > table  thead th{
+    @apply hidden border-hidden
+  }
+  .prose #table > table  tbody td {
+    @apply hidden sm:table-cell border-hidden align-middle
+  }
+  .prose #table-1 > table  thead th{
+    @apply hidden border-hidden
+  }
+  .prose #table-1 > table  tbody td {
+    @apply  sm:hidden border-hidden align-middle pl-0
+  }
+
+  /* ===== scrollbar ===== */
+  html {
+    overflow-y: scroll;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    @apply w-3;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-cris-fill;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cris-card;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-cris-card-muted;
+  }
+  /* mark {
+    @apply !text-cris-accent
+  } */
+  /* mark {
+    @apply  bg-cris-accent/5 p-1 rounded-md border border-cris-accent/40 font-light !text-cris-base
+  } */
+
+}
+@layer components {
+  .display-none {
+    @apply hidden;
+  }
+  
+  .focus-outline {
+    @apply outline-2 outline-offset-1 outline-cris-fill focus-visible:no-underline focus-visible:outline-dashed;
+  }
+  /* .leafygreen-ui-2l7nk5{
+    @apply bg-cris-light !important
+  } */
+}
+
+.leafygreen-ui-2l7nk5{
+  opacity: 1 !important;
+} 
+.leafygreen-ui-1kwyqle{
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet {
+  background: rgb(var(--color-accent)) !important;
+  /* @apply bg-skin-accent !important */
+}
+.swiper-pagination-bullet-active {
+  background: rgb(var(--color-accent)) !important;
+
+  /* @apply bg-skin-accent !important */
+}
+.swiper-button-prev {
+  /* left: 30; */
+  color: rgb(var(--color-accent)) !important;
+}
+.swiper-button-next {
+  /* left: 30; */
+  color: rgb(var(--color-accent)) !important;
+}
+
+/* 
+.swiper-slide img {
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  object-fit: cover;
+}
+.swiper {
+  width: auto;
+  height: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+}
+
+.mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+} */
