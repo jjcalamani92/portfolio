@@ -2,6 +2,7 @@
 
 import ListArticles1 from '@/src/components/ListArticles1'
 import ListCategories from '@/src/components/ListCategories'
+import { ListCategories1 } from '@/src/components/grid/categories/ListCategories1'
 import { getArticlesByParentId } from '@/src/lib/articles'
 import { getCategoriesByParentId } from '@/src/lib/categories'
 import { getPageBySlug } from '@/src/lib/pages'
@@ -19,8 +20,9 @@ export default async function Index(props: Props) {
   
   return (
     <React.Fragment>
+      {/* <ListCategories1 page={page} categories={categories}/> */}
       {
-        page.data?.type === 'category' && <ListCategories page={page} categories={categories} />
+        page.data?.type === 'category' && <ListCategories1 page={page} categories={categories} />
       } 
       {
         page.data?.type === 'blog' && <ListArticles1 page={page} articles={articles}/>

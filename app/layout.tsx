@@ -5,7 +5,7 @@ import QueryProvider from '@/src/providers/QueryProvider'
 import ThemeNextProvider from '@/src/providers/ThemeNextProvider'
 import { UIProvider } from '@/src/providers/UIProvider'
 import { getPagesByParentId, getPagesNavigation } from '@/src/lib/pages'
-import { HeaderP0 } from '@/src/components/header/HeaderP0'
+import { HeaderP0, HeaderP1 } from '@/src/components/header'
 
 export const metadata = {
   title: 'Portfolio',
@@ -26,7 +26,7 @@ export default async function RootLayout({
         <QueryProvider >
           <ThemeNextProvider site={site} >
               <UIProvider>
-                <HeaderP0 site={site} pages={pages} />
+                <HeaderP1 site={site} pages={pages} />
                 {children}
               </UIProvider>
           </ThemeNextProvider>
