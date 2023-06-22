@@ -8,6 +8,6 @@ export async function getCategoryByPaths(i:string,  paths: Paths):Promise<Catego
 }
 
 export async function getCategoriesByParentId(i:string,  id: string):Promise<Category[]> {
-  const res = await fetch(`${url}/api/${v}/${type}/query/categories/${i}/category/parentId?id=${id}`, );
+  const res = await fetch(`${url}/api/${v}/${type}/query/categories/${i}/category/parentId?id=${id}`, {next: {revalidate: 60}} );
   return res.json();
 }

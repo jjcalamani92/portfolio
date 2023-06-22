@@ -1,4 +1,4 @@
-// export const dynamic = 'error';
+
 
 import ListArticles1 from '@/src/components/ListArticles1'
 import ListCategories from '@/src/components/ListCategories'
