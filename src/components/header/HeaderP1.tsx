@@ -42,7 +42,7 @@ export function HeaderP1(props: Props) {
             {
                   site?.data.logo?.type === 'html'
                     ?
-                    // <MDXRemote source={site?.data.logo?.content}/>
+                    
                     <MarkdownHTML content={site?.data.logo?.content || ''} />
                     :
                     <img className="h-8 w-auto" src={site?.data.logo?.content} alt='logo description' />
