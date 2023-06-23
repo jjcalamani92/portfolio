@@ -1,35 +1,9 @@
-import { getSiteById } from '@/src/lib/sites'
-import { MDXRemote } from 'next-mdx-remote/rsc'
-import React from 'react';
-import { Home0 } from '../src/components/home/Home0';
-import { Home1 } from '@/src/components/home/Home1';
-import { Home2 } from '@/src/components/home/Home2';
+import React from 'react'
 
-
-export default async function Home() {
-  const site = await getSiteById()
-  
-  const components = { Home0, Home1, Home2: () => (
-    <Home2 name={site.data.info.name}/>
-  ), }
+export function Home0() {
   return (
-    <React.Fragment>
-
-        <MDXRemote
-          source={site.data.html.home}
-          components={components}
-        />
-        {/* <Home2 name='Hola' /> */}
-      {/* <MDXRemote
-        source={`<Home0 />
-          `}
-        components={components}
-      /> */}
-      {/* <div className='prose'>
-
-      </div> */}
-      {/* <div className="bg-cris-fill">
-
+    <div className="bg-cris-fill">
+        
         <div className="relative isolate px-6 pt-14 lg:px-8">
           <div
             className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -87,7 +61,6 @@ export default async function Home() {
             />
           </div>
         </div>
-      </div> */}
-    </React.Fragment>
+      </div>
   )
 }
