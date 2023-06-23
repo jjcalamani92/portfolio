@@ -38,28 +38,13 @@ export function ListCategories1(props: Props) {
                 {category.data.description}
                 </p>
 
-                {/* <p className="mt-3 text-sm text-blue-500">21 October 2019</p> */}
+                
               </div>
             </div>
           ))
           }
 
-          <div>
-            <img className="relative z-10 object-cover w-full rounded-md h-96" src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
-
-            <div className="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-cris-fill rounded-md shadow dark:bg-gray-900">
-              <a href="#" className="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl">
-                How to use sticky note for problem solving
-              </a>
-
-              <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm line-clamp-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis sint autem nesciunt,
-                laudantium quia tempore delect
-              </p>
-
-              {/* <p className="mt-3 text-sm text-blue-500">20 October 2019</p> */}
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>

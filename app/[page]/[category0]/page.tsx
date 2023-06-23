@@ -1,7 +1,7 @@
 import ListArticles1 from '@/src/components/ListArticles1'
 import ListCategories from '@/src/components/ListCategories'
 import { getArticlesByParentId } from '@/src/lib/articles'
-import { getCategoriesByParentId, getCategoryByPaths } from '@/src/lib/categories'
+import { getCategoriesByParentId, getCategoryByPaths, getCategoryByPathsSeo } from '@/src/lib/categories'
 import React from 'react'
 interface Props {
   params: {
@@ -10,6 +10,35 @@ interface Props {
   }
 }
 const i = '0'
+
+export async function generateMetadata(props: Props) {
+  const seo = await getCategoryByPathsSeo(i,props.params)
+  return {
+    title: seo?.data.name,
+    description: seo?.data.description,
+    
+    openGraph: {
+      title: seo?.data.name,
+      description: seo?.data.description,
+      url: process.env.NEXT_PUBLIC_SITE_URL,
+      
+      images: [
+        {
+          url: seo?.data.thumbnailUrl || 'https://blog.fmb.mx/hubfs/blog/blog-frecuencia.jpg',
+          width: 800,
+          height: 600,
+        },
+        {
+          url: seo?.data.thumbnailUrl || 'https://blog.fmb.mx/hubfs/blog/blog-frecuencia.jpg',
+          width: 1800,
+          height: 1600,
+          alt: seo?.data.description,
+        },
+      ],
+    },
+    
+  };
+}
 
 export default async function Index(props: Props) {
   const category = await getCategoryByPaths(i, props.params)

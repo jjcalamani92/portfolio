@@ -5,12 +5,41 @@ import ListCategories from '@/src/components/ListCategories'
 import { ListCategories1 } from '@/src/components/grid/categories/ListCategories1'
 import { getArticlesByParentId } from '@/src/lib/articles'
 import { getCategoriesByParentId } from '@/src/lib/categories'
-import { getPageBySlug } from '@/src/lib/pages'
+import { getPageBySlug, getPageSeoBySlug } from '@/src/lib/pages'
 import React from 'react'
 interface Props {
   params: {
     page: string
   }
+}
+
+export async function generateMetadata(props: Props) {
+  const seo = await getPageSeoBySlug(props.params.page)
+  return {
+    title: seo?.data.name,
+    description: seo?.data.description,
+    
+    openGraph: {
+      title: seo?.data.name,
+      description: seo?.data.description,
+      url: process.env.NEXT_PUBLIC_SITE_URL,
+      
+      images: [
+        {
+          url: seo?.data.thumbnailUrl || 'https://blog.fmb.mx/hubfs/blog/blog-frecuencia.jpg',
+          width: 800,
+          height: 600,
+        },
+        {
+          url: seo?.data.thumbnailUrl || 'https://blog.fmb.mx/hubfs/blog/blog-frecuencia.jpg',
+          width: 1800,
+          height: 1600,
+          alt: seo?.data.description,
+        },
+      ],
+    },
+    
+  };
 }
 
 export default async function Index(props: Props) {

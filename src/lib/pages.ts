@@ -14,3 +14,7 @@ export async function getPageBySlug(slug: string):Promise<Page> {
   const res = await fetch(`${url}/api/${v}/${type}/query/pages/page/${uid}/${slug}`,);
   return res.json();
 }
+export async function getPageSeoBySlug(slug: string) {
+  const res = await fetch(`${url}/api/${v}/${type}/query/pages/page/${uid}/${slug}`);
+  return res.json();
+}

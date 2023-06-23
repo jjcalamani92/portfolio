@@ -11,3 +11,8 @@ export async function getCategoriesByParentId(i:string,  id: string):Promise<Cat
   const res = await fetch(`${url}/api/${v}/${type}/query/categories/${i}/category/parentId?id=${id}`, {next: {revalidate: 60}} );
   return res.json();
 }
+
+export async function getCategoryByPathsSeo(i:string,  paths: Paths, ) {
+  const res = await fetch(`${url}/api/${v}/${type}/query/categories/${i}/category/${uid}/${getPaths(paths)}`);
+  return res.json();
+}
