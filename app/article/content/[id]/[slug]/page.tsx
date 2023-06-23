@@ -53,14 +53,14 @@ export async function generateMetadata(props: Props) {
 }
 
 
-export async function generateStaticParams() {
-  const articles = await getArticlesBySiteId()
+// export async function generateStaticParams() {
+//   const articles = await getArticlesBySiteId()
 
-  return articles.map((article) => ({
-    id: article._id,
-    slug: article.slug,
-  }));
-}
+//   return articles.map((article) => ({
+//     id: article._id,
+//     slug: article.slug,
+//   }));
+// }
 
 const data = `
 
