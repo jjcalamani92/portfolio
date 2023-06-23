@@ -2,15 +2,19 @@ import { Category } from "../interfaces/category";
 import { Paths } from "../interfaces/paths";
 import { uid, url, type, v, getPaths } from "../utils";
 
-export async function getCategoryByPaths(
+export async function  getCategoryByPaths(
   i: string,
   paths: Paths
 ): Promise<Category> {
+  // console.log('url', `${url}/api/${v}/${type}/query/categories/${i}/category/${uid}/${getPaths(
+  //   paths
+  // )}`)
   const res = await fetch(
     `${url}/api/${v}/${type}/query/categories/${i}/category/${uid}/${getPaths(
       paths
     )}`,
-    { cache: "no-store" }
+    
+    { next: { revalidate: 60 } }
   );
   return res.json();
 }

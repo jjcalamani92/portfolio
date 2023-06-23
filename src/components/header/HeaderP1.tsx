@@ -11,6 +11,8 @@ import { Page } from '@/src/interfaces/page'
 import { Site } from '@/src/interfaces/site'
 import Search from '../Search'
 import { useUI } from '@/src/providers/UIProvider'
+import { MarkdownHTML } from '../MarkdownPreview'
+import { MDXRemote } from 'next-mdx-remote/rsc'
 
 interface Props {
   pages: Page[]
@@ -37,7 +39,14 @@ export function HeaderP1(props: Props) {
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <Link href="/" className="text-2xl font-medium">
-              <h1>Logo0</h1>
+            {
+                  site?.data.logo?.type === 'html'
+                    ?
+                    // <MDXRemote source={site?.data.logo?.content}/>
+                    <MarkdownHTML content={site?.data.logo?.content || ''} />
+                    :
+                    <img className="h-8 w-auto" src={site?.data.logo?.content} alt='logo description' />
+                }
 
 
             </Link>
@@ -106,14 +115,14 @@ export function HeaderP1(props: Props) {
           <Dialog.Panel className="fixed top-0 right-0 shadow-lg rounded-lg m-2 z-50 w-3/4 overflow-y-auto h-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 bg-cris-fill border ">
             <div className="flex items-center justify-between">
               <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium">
-                <h1>Logo</h1>
-                {/* {
-                  logo?.type === 'html'
+                
+                {
+                  site?.data.logo?.type === 'html'
                     ?
-                    <h1>Logo</h1>
+                    <MarkdownHTML content={site?.data.logo?.content || ''} />
                     :
-                    <img className="h-8 w-auto" src={logo?.content} alt='logo description' />
-                } */}
+                    <img className="h-8 w-auto" src={site?.data.logo?.content} alt='logo description' />
+                }
               </Link>
               <button
                 type="button"

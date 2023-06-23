@@ -12,7 +12,7 @@ interface Props {
 const i = '0'
 
 export async function generateMetadata(props: Props) {
-  const seo = await getCategoryByPathsSeo(i,props.params)
+  const seo = await getCategoryByPathsSeo(i ,props.params)
   return {
     title: seo?.data.name,
     description: seo?.data.description,
@@ -53,6 +53,7 @@ export async function generateStaticParams() {
 
 export default async function Index(props: Props) {
   const category = await getCategoryByPaths(i, props.params)
+  // console.log('category', category)
   const articles = await getArticlesByParentId(category._id)
   
   const categories = await getCategoriesByParentId( `${+i+1}`, category._id)

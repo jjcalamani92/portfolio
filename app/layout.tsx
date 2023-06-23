@@ -60,6 +60,7 @@ export default async function RootLayout({
   const pages = await getPagesByParentId()
   return (
     <html suppressHydrationWarning lang="en">
+     
       <body>
         <QueryProvider >
           <ThemeNextProvider site={site} >

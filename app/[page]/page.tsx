@@ -51,6 +51,7 @@ export async function generateStaticParams() {
 
 export default async function Index(props: Props) {
   const page = await getPageBySlug(props.params.page)
+  // console.log('page', page)
   const categories = await getCategoriesByParentId( '0', page._id)
   const articles = await getArticlesByParentId(page._id)
   

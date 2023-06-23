@@ -2,6 +2,7 @@
 
 import { Article } from "@/src/interfaces/article";
 import { MarkdownPreview } from "./MarkdownPreview";
+import { MDXRemote } from "next-mdx-remote";
 
 interface Props {
   post: Article
@@ -39,6 +40,7 @@ export  function Post(props: Props) {
       </div>
 
       <div className="prose max-w-none prose-pre:bg-transparent prose-pre:p-0">
+      
         <MarkdownPreview markdown={post.data.content || ""} />
       </div>
       <div className="pt-12 border-t dark:border-gray-700">
