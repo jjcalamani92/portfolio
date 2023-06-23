@@ -1,7 +1,7 @@
 import ListArticles1 from '@/src/components/ListArticles1'
 import ListCategories from '@/src/components/ListCategories'
 import { getArticlesByParentId } from '@/src/lib/articles'
-import { getCategoriesByParentId, getCategoryByPaths, getCategoryByPathsSeo } from '@/src/lib/categories'
+import { getCategoriesByParentId, getCategoriesBySiteId, getCategoryByPaths, getCategoryByPathsSeo } from '@/src/lib/categories'
 import React from 'react'
 interface Props {
   params: {
@@ -39,6 +39,17 @@ export async function generateMetadata(props: Props) {
     
   };
 }
+
+export async function generateStaticParams() {
+  const categories = await getCategoriesBySiteId(i)
+
+  return categories.map((category) => ({
+    page: category.data.params.path[0],
+    category0: category.data.params.path[1],
+    
+  }));
+}
+
 
 export default async function Index(props: Props) {
   const category = await getCategoryByPaths(i, props.params)

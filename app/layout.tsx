@@ -55,7 +55,7 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
   const site = await getSiteById()
-  console.log('site', site)
+  // console.log('site', site)
   const navigation = await getPagesNavigation()
   const pages = await getPagesByParentId()
   return (
