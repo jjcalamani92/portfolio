@@ -5,7 +5,7 @@ import ListCategories from '@/src/components/ListCategories'
 import { ListCategories1 } from '@/src/components/grid/categories/ListCategories1'
 import { getArticlesByParentId } from '@/src/lib/articles'
 import { getCategoriesByParentId } from '@/src/lib/categories'
-import { getPageBySlug, getPageSeoBySlug } from '@/src/lib/pages'
+import { getPageBySlug, getPageSeoBySlug, getPagesBySiteId } from '@/src/lib/pages'
 import React from 'react'
 interface Props {
   params: {
@@ -40,6 +40,13 @@ export async function generateMetadata(props: Props) {
     },
     
   };
+}
+
+export async function generateStaticParams() {
+  const pages = await getPagesBySiteId()
+  return pages.map((page) => ({
+    page: page.slug,
+  }));
 }
 
 export default async function Index(props: Props) {
