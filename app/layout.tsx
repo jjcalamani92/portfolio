@@ -28,19 +28,19 @@ export async function generateMetadata() {
       description: site?.data.info.description,
       url: process.env.NEXT_PUBLIC_SITE_URL,
       siteName: site?.data.info.name,
-      images: [
-        {
-          url: site?.data.info.icon,
-          width: 800,
-          height: 600,
-        },
-        {
-          url: site?.data.info.icon,
-          width: 1800,
-          height: 1600,
-          alt: 'My custom alt',
-        },
-      ],
+      // images: [
+      //   {
+      //     url: site?.data.info.icon,
+      //     width: 800,
+      //     height: 600,
+      //   },
+      //   {
+      //     url: site?.data.info.icon,
+      //     width: 1800,
+      //     height: 1600,
+      //     alt: 'My custom alt',
+      //   },
+      // ],
       locale: 'es_ES',
       type: 'website',
     },
@@ -56,11 +56,10 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
   const site = await getSiteById()
-  // console.log('site', site)
   const navigation = await getPagesNavigation()
   const pages = await getPagesByParentId()
 
-  const components = {
+  const componentsHeader = {
     HeaderP0: () => (
       <HeaderP0 site={site} pages={pages} />
     ), HeaderP1: () => (
@@ -79,9 +78,8 @@ export default async function RootLayout({
             <UIProvider>
               <MDXRemote
                 source={site.data.components.header}
-                components={components}
+                components={componentsHeader}
               />
-              <HeaderP1 site={site} pages={pages} />
               {children}
             </UIProvider>
           </ThemeNextProvider>
