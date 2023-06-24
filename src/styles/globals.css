@@ -27,6 +27,30 @@
     --card-muted-color: 205, 205, 205;
     --divider-color: 189, 189, 189;
   }
+    html[class="lime"] {
+    --dark-primary-color: 77, 124, 15;
+    --light-primary-color: 236, 252, 203;
+    --primary-color: 132, 204, 22;
+    --fill-color: 255, 255, 255;
+    --accent-color: 101, 163, 13;
+    --primary-text: 33, 33, 33;
+    --secondary-text: 117, 117, 117;
+    --card-color: 230, 230, 230;
+    --card-muted-color: 205, 205, 205;
+    --divider-color: 189, 189, 189;
+  }
+  html[class="darkLime"] {
+    --dark-primary-color: 77, 124, 15;
+    --light-primary-color: 54, 83, 20;
+    --primary-color:132, 204, 22;
+    --fill-color: 33, 39, 55;
+    --accent-color: 101, 163, 13;
+    --primary-text: 234, 237, 243;
+    --secondary-text: 245, 248, 255;
+    --card-color: 230, 230, 230;
+    --card-muted-color: 205, 205, 205;
+    --divider-color: 189, 189, 189;
+  }
   /* html[class="red"] {
     --dark-primary-color: rgb(185, 28, 28);
     --light-primary-color: rgb(254, 226, 226);
@@ -45,6 +69,30 @@
     --primary-color: rgb(220, 38, 38);
     --fill-color: rgb(33, 39, 55);
     --accent-color: rgb(239, 68, 68);
+    --primary-text: rgb(234, 237, 243);
+    --secondary-text: rgb(245, 248, 255);
+    --card-color: rgb(230, 230, 230);
+    --card-muted-color: rgb(205, 205, 205);
+    --divider-color: rgb(189, 189, 189);
+  } */
+  /* html[class="lime"] {
+    --dark-primary-color: rgb(77, 124, 15);
+    --light-primary-color: rgb(236, 252, 203);
+    --primary-color: rgb(132, 204, 22);
+    --fill-color: rgb(255, 255, 255);
+    --accent-color: rgb(101, 163, 13);
+    --primary-text: rgb(33, 33, 33);
+    --secondary-text: rgb(117, 117, 117);
+    --card-color: rgb(230, 230, 230);
+    --card-muted-color: rgb(205, 205, 205);
+    --divider-color: rgb(189, 189, 189);
+  }
+  html[class="darkLime"] {
+    --dark-primary-color: rgb(77, 124, 15);
+    --light-primary-color: rgb(54, 83, 20);
+    --primary-color:rgb(132, 204, 22);
+    --fill-color: rgb(33, 39, 55);
+    --accent-color: rgb(101, 163, 13);
     --primary-text: rgb(234, 237, 243);
     --secondary-text: rgb(245, 248, 255);
     --card-color: rgb(230, 230, 230);
