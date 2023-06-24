@@ -34,14 +34,16 @@ export async function getCategoryByPathsSeo(i: string, paths: Paths) {
   const res = await fetch(
     `${url}/api/${v}/${type}/query/categories/${i}/category/${uid}/${getPaths(
       paths
-    )}`
+    )}`,
+    { next: { revalidate: 60 } }
   );
   return res.json();
 }
 
 export async function getCategoriesBySiteId(i: string): Promise<Category[]> {
   const res = await fetch(
-    `${url}/api/${v}/${type}/query/categories/${i}/category/siteId?id=${uid}`
+    `${url}/api/${v}/${type}/query/categories/${i}/category/siteId?id=${uid}`,
+    { next: { revalidate: 60 } }
   );
   return res.json();
 }
