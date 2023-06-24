@@ -26,7 +26,7 @@ export async function getPageSeoBySlug(slug: string) {
   const res = await fetch(
     `${url}/api/${v}/${type}/query/pages/page/${uid}/${slug}`,
     // { next: { revalidate: 60 } }
-    {cache: 'no-cache'}
+    {cache: 'no-store'}
   );
   return res.json();
 }

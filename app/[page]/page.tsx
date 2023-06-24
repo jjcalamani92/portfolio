@@ -26,12 +26,12 @@ export async function generateMetadata(props: Props) {
       
       images: [
         {
-          url: seo?.data.thumbnailUrl || 'https://blog.fmb.mx/hubfs/blog/blog-frecuencia.jpg',
+          url: seo?.data.thumbnailUrl,
           width: 800,
           height: 600,
         },
         {
-          url: seo?.data.thumbnailUrl || 'https://blog.fmb.mx/hubfs/blog/blog-frecuencia.jpg',
+          url: seo?.data.thumbnailUrl,
           width: 1800,
           height: 1600,
           alt: seo?.data.description,
