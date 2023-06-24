@@ -96,7 +96,7 @@ export function HeaderP2(props: Props) {
                 </>
 
               }
-              <Link href={'/search'}
+              <Link href={'#'}
                 className=" items-center"
               >
                 <MagnifyingGlassIcon

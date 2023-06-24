@@ -57,7 +57,7 @@ export default async function Index(props: Props) {
   
   return (
     <React.Fragment>
-      {/* <ListCategories1 page={page} categories={categories}/> */}
+      
       {
         page.data?.type === 'category' && <ListCategories1 page={page} categories={categories} />
       } 
