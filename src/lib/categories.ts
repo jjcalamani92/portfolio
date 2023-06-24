@@ -35,7 +35,8 @@ export async function getCategoryByPathsSeo(i: string, paths: Paths) {
     `${url}/api/${v}/${type}/query/categories/${i}/category/${uid}/${getPaths(
       paths
     )}`,
-    { next: { revalidate: 60 } }
+    // { next: { revalidate: 60 } }
+    {cache: 'no-store'}
   );
   return res.json();
 }
