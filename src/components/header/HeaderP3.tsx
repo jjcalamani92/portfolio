@@ -9,10 +9,7 @@ import { MoonIcon, SunIcon, MagnifyingGlassIcon } from '@heroicons/react/20/soli
 import { useQueryClient } from '@tanstack/react-query'
 import { Page } from '@/src/interfaces/page'
 import { Site } from '@/src/interfaces/site'
-import Search from '../Search'
-import { useUI } from '@/src/providers/UIProvider'
 import { MarkdownHTML } from '../MarkdownPreview'
-import { MDXRemote } from 'next-mdx-remote/rsc'
 
 interface Props {
   pages: Page[]
@@ -28,10 +25,7 @@ export function HeaderP3(props: Props) {
   const lightAndDarkMode = site?.data.theme?.lightAndDarkMode
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
   const { theme, setTheme } = useTheme();
-  const {
-    toggleSlideOversCarts,
-    toggleSearch
-  } = useUI();
+ 
   return (
     <React.Fragment>
       <div className="">
