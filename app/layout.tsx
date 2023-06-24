@@ -5,7 +5,7 @@ import QueryProvider from '@/src/providers/QueryProvider'
 import ThemeNextProvider from '@/src/providers/ThemeNextProvider'
 import { UIProvider } from '@/src/providers/UIProvider'
 import { getPagesByParentId, getPagesNavigation } from '@/src/lib/pages'
-import { HeaderP0, HeaderP1, HeaderP2 } from '@/src/components/header'
+import { HeaderP0, HeaderP1, HeaderP2, HeaderP3 } from '@/src/components/header'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 
 export async function generateMetadata() {
@@ -66,6 +66,8 @@ export default async function RootLayout({
       <HeaderP1 site={site} pages={pages} />
     ), HeaderP2: () => (
       <HeaderP2 site={site} pages={pages} />
+    ), HeaderP3: () => (
+      <HeaderP3 site={site} pages={pages} />
     ),
   }
 
