@@ -51,18 +51,12 @@ module.exports = {
           900: '#111827',
           950: '#030712',
         },
-        // skin: {
-        //   base: withOpacity('--color-text-base'),
-        //   accent: withOpacity('--color-accent'),
-        //   inverted: withOpacity('--color-fill'),
-        // },
       },
       backgroundColor: {
         cris: {
           dark: withOpacity('--dark-primary-color'),
           light: withOpacity('--light-primary-color'),
           fill: withOpacity('--fill-color'),
-
           accent: withOpacity('--accent-color'),
           inverted: withOpacity('--primary-text'),
           card: withOpacity('--card-color'),
@@ -85,13 +79,7 @@ module.exports = {
         },
         transparent: 'transparent',
 
-        // skin: {
-        //   fill: withOpacity('--color-fill'),
-        //   accent: withOpacity('--color-accent'),
-        //   inverted: withOpacity('--color-text-base'),
-        //   card: withOpacity('--color-card'),
-        //   'card-muted': withOpacity('--color-card-muted'),
-        // },
+        
       },
       outlineColor: {
         cris: {
@@ -99,9 +87,6 @@ module.exports = {
         },
         transparent: 'transparent',
 
-        // skin: {
-        //   fill: withOpacity('--color-accent'),
-        // },
       },
       borderColor: {
         cris: {
@@ -124,11 +109,7 @@ module.exports = {
           950: '#030712',
         },
         transparent: 'transparent',
-        // skin: {
-        //   line: withOpacity('--color-border'),
-        //   fill: withOpacity('--color-text-base'),
-        //   accent: withOpacity('--color-accent'),
-        // },
+        
       },
       fill: {
         cris: {

@@ -10,7 +10,9 @@ export default async function Home() {
   const site = await getSiteById()
 
   const components = {
-    Home0, Home1, Home2: () => (
+    Home0: () => (
+      <Home0 home={site.data.html.home} />
+    ), Home1, Home2: () => (
       <Home2 name={site.data.info.name} />
     ),
   }
@@ -18,7 +20,7 @@ export default async function Home() {
     <React.Fragment>
 
       <MDXRemote
-        source={site.data.html.home}
+        source={site.data.html.home.component}
         components={components}
       />
     </React.Fragment>

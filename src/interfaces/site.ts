@@ -10,10 +10,35 @@ export interface Site {
   pages: Page[]
 }
 
+export interface Home {
+ 
+    component: string
+    content: {
+      h1: string
+      h2: string
+      h3: string
+      p: string
+    }
+    button: {
+      b1: {
+        name: string
+        slug: string
+        type: string
+      }
+      b2: {
+        name: string
+        slug: string
+        type: string
+      }
+    
+  }
+  
+}
+
 interface Data {
   type: string
   html: {
-    home: string
+    home: Home
   }
   logo: {
     content: string

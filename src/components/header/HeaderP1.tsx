@@ -105,7 +105,7 @@ export function HeaderP1(props: Props) {
                 aria-hidden="true"
               />
             </div>
-            <Link href="#" className="rounded-md bg-cris-accent px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-cris-accent/95 ">
+            <Link href="#" className="rounded-md bg-cris-accent px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-cris-accent/95  text-cris-inverted">
               Login
             </Link>
           </div>
