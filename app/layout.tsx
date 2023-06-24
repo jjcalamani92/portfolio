@@ -58,7 +58,7 @@ export default async function RootLayout({
   const site = await getSiteById()
   const navigation = await getPagesNavigation()
   const pages = await getPagesByParentId()
-
+  // console.log('site', site)
   const componentsHeader = {
     HeaderP0: () => (
       <HeaderP0 site={site} pages={pages} />
