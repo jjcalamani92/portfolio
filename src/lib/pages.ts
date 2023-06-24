@@ -33,6 +33,7 @@ export async function getPagesBySiteId(): Promise<Page[]> {
   const res = await fetch(
     `${url}/api/${v}/${type}/query/pages/page/siteId?id=${uid}`,
     // { next: { revalidate: 60 } }
+    {cache: 'no-cache'}
   );
   return res.json();
 }
