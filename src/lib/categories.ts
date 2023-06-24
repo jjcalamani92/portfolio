@@ -43,7 +43,10 @@ export async function getCategoryByPathsSeo(i: string, paths: Paths) {
 export async function getCategoriesBySiteId(i: string): Promise<Category[]> {
   const res = await fetch(
     `${url}/api/${v}/${type}/query/categories/${i}/category/siteId?id=${uid}`,
-    { next: { revalidate: 60 } }
+    // { next: { revalidate: 60 } }
+    {cache: 'no-cache'}
+
+    
   );
   return res.json();
 }
